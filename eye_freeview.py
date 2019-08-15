@@ -324,17 +324,13 @@ if __name__ == '__main__':
 	base_path = Path('./')
 
 	
-	# analyze the TSF
+	# analyze the REPEATED
 	trials = run_analysis('REPEATED', ppd, xpixels, ypixels, sampling_rate, base_path)
 	trials.to_csv('REPEATED_analyzed.csv', index=False)
 
-	# analyze the TSB
-	#trials, bad_trials = run_analysis('TSB', ppd, xpixels, ypixels, sampling_rate, base_path)
-	#trials.to_csv('TSB_analyzed.csv', index=False)
-	#f = open('TSB_bad_trials.txt', 'w')
-	#for item in bad_trials:
-	#	f.write(str(item) + "\n")
-	#f.close()
+	# analyze the NOVEL
+	trials = run_analysis('NOVEL', ppd, xpixels, ypixels, sampling_rate, base_path)
+	trials.to_csv('NOVEL_analyzed.csv', index=False)
 	
 
 
